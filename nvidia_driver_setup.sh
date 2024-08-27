@@ -1,11 +1,11 @@
 #! /usr/bin/bash
 
-##################################################################################
-# This is a script for removing, installing, or reinstalling the Nvidia driver.  #
-# Author:    Young Lin                                                           #
-# Date:      01/10/2024                                                          #
-# Tested on: Ubuntu 20.04.6 LTS, Ubuntu 24.04 LTS                                #
-##################################################################################
+############################################################################################
+# This is a script for removing, installing, or reinstalling the Nvidia driver on Ubuntu.  #
+# Author:         Young Lin                                                                #
+# Last edited:    08/27/2024                                                               #
+# Tested on:      Ubuntu 20.04.6 LTS, Ubuntu 24.04 LTS                                     #
+############################################################################################
 
 # Make sure running as root
 if [ `id -u` -ne 0 ]; then
@@ -13,7 +13,7 @@ if [ `id -u` -ne 0 ]; then
     exit 1
 fi
 
-# A function to create a log file
+# Create a log file
 LOGFILE="/var/log/nvidia_driver_setup.log"
 exec > >(tee -a "$LOGFILE") 2>&1
 
